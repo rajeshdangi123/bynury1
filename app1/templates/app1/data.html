@@ -1,0 +1,30 @@
+{% extends 'app1/base.html' %}
+{% block title %} data{%endblock title%}
+
+{% block contants %}
+
+<form action="", method="POST" ,enctype="multipart/form-data">
+    <table  border="1" cellpadding="12px">
+        <tr>
+            <th>status</th>
+            <th>submitted_date</th>
+            <th>resolved_date</th>
+            
+
+        </tr>
+        {% for i in pi %}
+        <tr>
+            <td>{{i.status}}</td>
+            <td>{{i.submitted_at}}</td>
+            <td>{{i.resolved_at}}</td>
+            
+
+        </tr>
+        {% endfor%}
+
+    </table>
+    
+
+</form>
+
+{% endblock contants %}

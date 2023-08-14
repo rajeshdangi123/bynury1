@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <title>{% block title  %} home{% endblock title  %}</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        body{
+            background-color:rgb(245, 6, 225) ;
+        }
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin:auto;
+            box-sizing:border-box;
+            padding-left: 20px;
+            padding-right: 5px;
+        }
+        nav{
+            background-color: rgba(245, 8, 63, 0.881);
+            height: 60px;
+            width: 100%;
+            
+        }
+        nav ul {
+            float: right;
+            margin-right: 20px ;
+        }
+        nav ul li a {
+            font-size:20px;
+            text-transform: uppercase;
+            border-radius: 13px;
+            padding-top: 600px;
+            padding-bottom: 70px;
+            color: white;
+        }
+        a.active ,a.hover{
+            background: #1b9bff;
+            transform: 5s;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <label for=" welcom to infograins">
+            <ul>
+                <li><a href="{% url 'base'%}">home </a></li>
+                
+                <li><a href="{% url 'create_request'%}"  >create_request</a> </li>
+                <li><a href="{% url 'get'%}"     >check_status</a></li>
+                
+            </ul>
+        </label>
+    </nav>
+   
+    {% block contants %}
+    {% endblock contants %}
+

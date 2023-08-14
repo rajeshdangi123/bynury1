@@ -1,0 +1,143 @@
+
+{% extends 'app1/base.html' %}
+{% block title %} singup {% endblock title %}
+
+{% block contants %}
+
+<style>
+    body{
+        background-color: #c45ec4;
+    }
+    .container{
+        position: absolute;
+        max-width: 800px;
+        height: 500px;
+        margin: auto;
+        top: 350px;
+        left: 500px;
+        transform: translate(-50%,-50%);
+     
+    }
+    .myRightCtn{
+        position: relative;
+        background-image:linear-gradient(45deg,#f36bff,#f72fe0);
+        border-radius: 25px;
+        height: 200px;
+        padding: 25px;
+        color: rgb(226, 158, 158);
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        left: 675px;
+        top: 0px;
+    }
+    .myLeftCtn{
+        position: relative;
+        background-color: #fff;
+        border-radius: 25px;
+        height: 100%;
+        padding: 25px;
+        padding-left: 60px;
+    } 
+     .myLeftCtn header{
+        
+        color: #e303cc;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .row{
+        height: 50%;
+        width: 50%;
+    }
+    .myCard{
+        position: relative;
+        background: #fff;
+        height: 100%;
+        border-radius: 25px;
+        
+        box-shadow: 0px 10px 40px --10px rgba(0,0,0,0.7);
+     }
+    .box{
+        position: relative;
+        margin: 20px;
+        margin-bottom: 500px; 
+          }
+    .myLeftCtn .myInput{
+        width: 230px;
+        border-radius: 15px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border:rosybrown;
+        box-shadow: 0px 10px 49px --14px rgba(212, 10, 10, 0.7);
+        box-sizing: 39px;
+    } 
+</style>
+
+
+
+<div class="container">
+    <div class="myCard">
+        <div class="col-md-6">
+            <div class="myLeftCtn">
+                <form action="" method="POST">
+                    {%csrf_token%}
+                    <header>Create New Account </header>
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <label for="customer_id">customer_id</label><br>
+                        <input type="text" placeholder="enter user customer_id" name="customer_id" class="myInput" id="username"><br><br>
+
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <label for="fname">type</label><br>
+                        <input type="text"  name="type"  class="myInput" id="username"><br><br>
+
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <label for="details">details</label><br>
+                        <input type="text" placeholder="enter details" name="details" class="myInput" id="username"><br><br>
+                        
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <label for="attachment">attachment</label><br>
+                        <input type="file" placeholder="upload files" name="attachment" class="myInput" id="username"><br><br>
+                        
+                    </div>
+                   
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <button input type="submit" class="myInput" id="username" value="submit">Signup</button><br>
+                    </div>
+                    
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-md-6">
+    <div class="myRightCtn">
+        <div class="box"><header>hello world</header>
+           
+         
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock contants %}
